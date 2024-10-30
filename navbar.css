@@ -1,206 +1,122 @@
-/* Mobile -- friendly accessible */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    .mission-text-section {
-        text-align: center;
-    }
+a, .btn {
+    transition: all 300ms ease;
 }
 
+/* desktop nav */
 
-* {
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    background-color: #E0DDCF;
+nav, .nav-links {
+ display: flex;
 }
 
-/*          ----         Main sections of the home page        -----     */
-
-
-/* image container  */
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.home-img {
-    float: left;
-    width: 27%;
-    padding: 25px;
-    margin-left: 70px;
-    
-  }
-  
-  /* Clear floats after image containers */
-  .side-img::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-
-/* slogan heading   */
-
-#motto {
-        font-family: "jubilat", sans-serif;
-        font-style: italic;
-        font-weight: 700;
-        display: inline-block;
-        line-height: 1;
-        margin-top: 9px;
-        margin-bottom: 12px;
-        color: #88c3e0;
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
 }
 
-
-.info-contain{
-    text-align: center;
-    margin-bottom: 90px;
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
 }
 
-#purpose-contain {
-    width: 850px; 
-    text-align: left; 
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white ;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* hamburger menu */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
     display: inline-block;
-    margin-right: 320px;
-    
-    /* feel free to change the font..  */
-    font-style: Andale Mono; 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    color: #2D232E;
-
-    h2 {
-        font-size: 50px;
-        margin-bottom: 10px;
-    }
-  
 }
 
-
-/* book with me sub heading -- home page */
-
-#home-book-btn {
-  border-radius: 22px;
-  background-color: #534B52;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 170px;
-  transition: all 0.5s;
-  cursor: pointer;
-  
-}
-
-#home-book-btn span {
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
     cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-    background-color: #534B52;
-    font-style: Andale Mono;
-  }
-  
-#home-book-btn span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-#home-book-btn:hover span {
-    padding-right: 25px;
-  }
-  
-#home-book-btn:hover span:after {
-    opacity: 1;
-    right: 0;
 }
 
-
-/* Running text banner with Services */
-
-   .text-banner {
-    height: 50px; 
-    overflow: hidden;
-    position: relative;
-    }
-
-    .text-banner p {
-    font-size: 42px;
-    font-family: "Apple Chancery", sans-serif;
-    font-weight: 600;
-    word-spacing: 80px;
-    position: absolute;
+.hamburger-icon span {
     width: 100%;
-    height: 100%;
-    margin: 0;
-    line-height: 50px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
     text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
 
-    /* Starting position */
-    -moz-transform:translateX(100%);
-    -webkit-transform:translateX(100%); 
-    transform:translateX(100%);
-    /* this applies the animation to this element */ 
-    -moz-animation: text-banner 20s linear infinite;
-    -webkit-animation: text-banner 20s linear infinite;
-    animation: text-banner 20s linear infinite;
-    }
-    /* Movement ---> (provides // defines the animation) */
-    @-moz-keyframes text-banner {
-    0% { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(-100%); }
-    }
-    @-webkit-keyframes text-banner {
-    0% { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(-100%); }
-    }
-    @keyframes text-banner {
-    0% { 
-    -moz-transform: translateX(100%); /* Browser bug fix */
-    -webkit-transform: translateX(100%); /* Browser bug fix */
-    transform: translateX(100%); 
-    }
-    100% { 
-    -moz-transform: translateX(-100%); /* Browser bug fix */
-    -webkit-transform: translateX(-100%); /* Browser bug fix */
-    transform: translateX(-100%); 
-    }
-    }
+.menu-links li {
+    list-style: none;
+}
 
+.menu-links.open {
+    max-height: 300px;
+}
 
-    /* lower hero page  */
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
 
-    .hero-article {
-        font-style: Andale Mono;
-        padding: 50px;
-        font-size: 40px;
-        text-align: left;
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
 
-        width: 2000;
-        
-        background-color: #474448;
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
 
-        h3, p , i{
-            background-color: #474448;
-            color: white;
-        }
-    }
+.hamburger-icon span:first-child {
+    transform: none;
+}
 
-    .hero-article:after{
-        content: "";
-        display: table;
-        clear: both;
-        
-    }
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
 
-    .lower-img {
-        float: left;
-        width: 50%;
-        background-color: #474448;
-    }
-
-    #hero-pic {
-        margin-left: 450px;
-    }
+.hamburger-icon span:first-child {
+    transform: none;
+}
