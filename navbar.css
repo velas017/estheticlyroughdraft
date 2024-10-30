@@ -1,0 +1,206 @@
+/* Mobile -- friendly accessible */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .mission-text-section {
+        text-align: center;
+    }
+}
+
+
+* {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    background-color: #E0DDCF;
+}
+
+/*          ----         Main sections of the home page        -----     */
+
+
+/* image container  */
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.home-img {
+    float: left;
+    width: 27%;
+    padding: 25px;
+    margin-left: 70px;
+    
+  }
+  
+  /* Clear floats after image containers */
+  .side-img::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+/* slogan heading   */
+
+#motto {
+        font-family: "jubilat", sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        display: inline-block;
+        line-height: 1;
+        margin-top: 9px;
+        margin-bottom: 12px;
+        color: #88c3e0;
+}
+
+
+.info-contain{
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+#purpose-contain {
+    width: 850px; 
+    text-align: left; 
+    display: inline-block;
+    margin-right: 320px;
+    
+    /* feel free to change the font..  */
+    font-style: Andale Mono; 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #2D232E;
+
+    h2 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+  
+}
+
+
+/* book with me sub heading -- home page */
+
+#home-book-btn {
+  border-radius: 22px;
+  background-color: #534B52;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 170px;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+
+#home-book-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    background-color: #534B52;
+    font-style: Andale Mono;
+  }
+  
+#home-book-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+#home-book-btn:hover span {
+    padding-right: 25px;
+  }
+  
+#home-book-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Running text banner with Services */
+
+   .text-banner {
+    height: 50px; 
+    overflow: hidden;
+    position: relative;
+    }
+
+    .text-banner p {
+    font-size: 42px;
+    font-family: "Apple Chancery", sans-serif;
+    font-weight: 600;
+    word-spacing: 80px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%); 
+    transform:translateX(100%);
+    /* this applies the animation to this element */ 
+    -moz-animation: text-banner 20s linear infinite;
+    -webkit-animation: text-banner 20s linear infinite;
+    animation: text-banner 20s linear infinite;
+    }
+    /* Movement ---> (provides // defines the animation) */
+    @-moz-keyframes text-banner {
+    0% { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+    }
+    @-webkit-keyframes text-banner {
+    0% { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+    }
+    @keyframes text-banner {
+    0% { 
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%); 
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Browser bug fix */
+    -webkit-transform: translateX(-100%); /* Browser bug fix */
+    transform: translateX(-100%); 
+    }
+    }
+
+
+    /* lower hero page  */
+
+    .hero-article {
+        font-style: Andale Mono;
+        padding: 50px;
+        font-size: 40px;
+        text-align: left;
+
+        width: 2000;
+        
+        background-color: #474448;
+
+        h3, p , i{
+            background-color: #474448;
+            color: white;
+        }
+    }
+
+    .hero-article:after{
+        content: "";
+        display: table;
+        clear: both;
+        
+    }
+
+    .lower-img {
+        float: left;
+        width: 50%;
+        background-color: #474448;
+    }
+
+    #hero-pic {
+        margin-left: 450px;
+    }
