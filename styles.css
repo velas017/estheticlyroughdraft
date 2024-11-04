@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: #E0DDCF;
+    background-color: #efefef;
 }
 
 h1 {
@@ -23,4 +23,17 @@ h1 {
     max-inline-size: 960px;
     unicode-bidi: isolate;
     margin: auto;
+}
+
+.hero-img {
+    display: inline-block;
+    margin: 10px;
+    max-width: 280px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
 }
