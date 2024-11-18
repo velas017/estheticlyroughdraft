@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,14 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- CSS font -->
+    <link href="https://fonts.cdnfonts.com/css/the-aesthetic-essential" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- beginning of my nav edit accordingly  -->
     <nav id="desktop-nav">
@@ -18,7 +23,7 @@
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#expereince">Experience</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -34,7 +39,7 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#expereince" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
@@ -52,7 +57,98 @@
     </div>
 
 
+<!-- link sections -->
 
+    <div class="body-headers" id="about">About</div>
+
+    <div class="body-headers" id="experience">Experience</div>
+
+    <div class="body-headers" id="projects">Services</div>
+
+
+    <div class="body-headers" id="contact"> Contact 
+
+        <div class="contact_section" id="contact2">
+        
+            <h3 class="contact__title">Connect with Me</h3>
+    
+            <div class="contact__container container grid">
+                <div class="contact__content">
+    
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="bx bx-mail-send contact__card-icon"></i>
+    
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">I check my inbox daily!</span>
+    
+                            <a href="mailto:amyly.esthetics@gmail.com" class="contact__button">What's on your mind? <i class="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        </div>
+
+                        <div class="contact__card">
+                            <h3 class="contact__card-title">Directions</h3>
+                            <span class="contact__card-data">Sassy Salon</span>
+                            <p>7211 E Independence Blvd</p>
+                            <p>Charlotte, NC 28227</p>
+                            <p>Appointment-based, No Walk-Ins!</p>
+                            <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.7116356171496!2d-80.74153312423522!3d35.163811772758706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8854217439f622f3%3A0xde600020180be83d!2s7211%20E%20Independence%20Blvd%2C%20Charlotte%2C%20NC%2028227!5e0!3m2!1sen!2sus!4v1731107740016!5m2!1sen!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                          </div>
+                    </div>
+                </div>
+    
+                <div class="contact__content">
+                    <div class="contact__card">
+                        <i class="bx bxl-linkedin-square contact__card-icon"></i>
+
+                        <h3 class="contact__card-title">Instagram</h3>
+                        <span class="contact__card-data">See more of my work!</span>
+
+                        <a href="https://www.instagram.com/estheticlyskincare/" class="contact__button">Follow me <i class="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    </div>
+
+                    <div class="contact__card">
+                        <i class="bx bx-phone contact__card-icon"></i>
+
+                        <h3 class="contact__card-title">Call me</h3>
+                        <span class="contact__card-data">(980) 999-3115</span>
+                        <p>Business Line, Text Only</p>
+                    </div>
+
+                    <div class="accordion-list">
+                        <h3 class="contact__card-title">FAQ's</h3>
+
+                        <button class="accordion-btn">What are the benefits of a facial?</button>
+                        <div class="panel">
+                            <p class="contact__card-data">Your skin is the biggest organ in your body, you should want to invest and take care of it. Overall improves skin health, even skin tone and texture, increase absorption of skincare products, and many more!</p>
+                        </div>
+
+                        <button class="accordion-btn">What product line are you using?</button>
+                        <div class="panel">
+                            <p class="contact__card-data">Majority of my backbar is from Skinscript! Created by estheticians for estheticians. </p>
+                        </div>
+
+                        <button class="accordion-btn">Is there an age limit to get a facial?</button>
+                        <div class="panel">
+                            <p class="contact__card-data">The youngest age is 13; offering teen facials with a guardian’s consent. Facials are welcomed and recommended for any age and gender.</p>
+                        </div>
+
+                        <button class="accordion-btn">I have sensitive. Can I get a facial?</button>
+                        <div class="panel">
+                            <p class="contact__card-data">Yes of course, facials are catered to all and any skin type. We will be using more calm gentle products. </p>
+                        </div>
+
+                        <button class="accordion-btn">Which facial should I book?</button>
+                        <div class="panel">
+                            <p class="contact__card-data">If this is your first facial, any customized facial is ideal. During the skin analysis, I will be looking detailed into your skin to start the correct journey and ensure you are getting the treatment suited for your skin. </p>
+                        </div>
+                    </div>
+
+                    <!-- There needs to be an aftercare menu/page or section -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
