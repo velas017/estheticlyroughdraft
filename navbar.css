@@ -35,6 +35,7 @@ a:hover {
 
 .logo {
     font-size: 2rem;
+    font-weight: bolder;
 }
 
 .logo:hover {

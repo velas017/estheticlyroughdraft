@@ -4,6 +4,43 @@
     background-color: #E0DDCF;
     scroll-behavior: smooth;
 
+  
+  
+/*  edar css for hero  */
+  
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+#hero-section {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 960px;
+    unicode-bidi: isolate;
+    margin: auto;
+}
+
+.hero-img {
+    display: inline-block;
+    margin: 10px;
+    max-width: 280px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
 }
 
 
@@ -248,3 +285,8 @@
   /* -- Small Devices */
   @media screen and (max-width: 350px) {
   }
+    padding: 0;
+    margin: 0;
+    background-color: #e7dfcf;
+}
+
