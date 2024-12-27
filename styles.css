@@ -3,7 +3,7 @@
     margin: 0; */
     scroll-behavior: smooth;
 
-  
+}
   
 /*  edar css for hero  */
   
@@ -11,7 +11,7 @@ h1 {
     display: block;
     font-family: 'Klarna', sans-serif;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
@@ -27,7 +27,13 @@ h1 {
 }
 
 .hero-text {
-    margin-bottom: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     font-size: 1.25rem;
     line-height: 1.56;
 }
@@ -52,8 +58,7 @@ h1 {
 }
 
 .hero-img {
-    border: 5px solid grey;
-    border-radius: 12px;
+    border-radius: 25px;
     margin: 10px;
     min-width: 230px;
     overflow: hidden;
@@ -62,19 +67,19 @@ h1 {
     width: 35rem;
     object-fit: cover;
 }
-}
 
 
 
-                                                        /*       Page sections      */
+
+/*       Page sections      */
 
 
-      .body-headers {
-          text-align: center;
-          font-size: 85px;
-          font-family: 'The Aesthetic Essential', sans-serif;
-          padding-top: 90px;
-      }
+    .body-headers {
+        text-align: center;
+        font-size: 85px;
+        font-family: 'The Aesthetic Essential', sans-serif;
+        padding-top: 90px;
+    }
 
 
 
