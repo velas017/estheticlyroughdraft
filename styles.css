@@ -10,7 +10,7 @@
 h1 {
     display: block;
     font-family: 'Klarna', sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 4rem;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
@@ -19,6 +19,11 @@ h1 {
     font-weight: bold;
     unicode-bidi: isolate;
     letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text {
