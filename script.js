@@ -54,36 +54,38 @@ tabButtons.forEach(button => {
 });
 
 // Accordion Logic
-const faqQuestions = document.querySelectorAll('.faq-question');
+// const faqQuestions = document.querySelectorAll('.faq-question');
 
-faqQuestions.forEach(question => {
-  question.addEventListener('click', () => {
-    const answer = question.nextElementSibling;
-    const isOpen = answer.style.display === 'block';
-    // Close all answers
-    document.querySelectorAll('.faq-answer').forEach(a => (a.style.display = 'none'));
-    // Toggle current answer
-    answer.style.display = isOpen ? 'none' : 'block';
-  });
-});
+// faqQuestions.forEach(question => {
+//   question.addEventListener('click', () => {
+//     const answer = question.nextElementSibling;
+//     const isOpen = answer.style.display === 'block';
+//     // Close all answers
+//     document.querySelectorAll('.faq-answer').forEach(a => (a.style.display = 'none'));
+//     // Toggle current answer
+//     answer.style.display = isOpen ? 'none' : 'block';
+//   });
+// });
+
+
 
 
 // Script for the FAQ dropdown
 
-let acc = document.getElementsByClassName("accordion-btn");
-let i;
+// let acc = document.getElementsByClassName("accordion-btn");
+// let i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("btn-active");
-    let panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     this.classList.toggle("btn-active");
+//     let panel = this.nextElementSibling;
+//     if (panel.style.maxHeight) {
+//       panel.style.maxHeight = null;
+//     } else {
+//       panel.style.maxHeight = panel.scrollHeight + "px";
+//     }
+//   });
+// }
 
 
 
@@ -102,3 +104,27 @@ for (d = 0; d < drop.length; d++) {
     }
   });
 }
+
+
+
+
+
+
+// 12/26 
+// Script for FAQ accordion
+
+const items = document.querySelectorAll(".faq button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));

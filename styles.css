@@ -65,7 +65,7 @@ h1 {
 
 
       .body-headers {
-          text-align: center;
+          /* text-align: center; */
           font-size: 5rem;
           /* font-family: 'The Aesthetic Essential', sans-serif; */
           font-family: "Karla", sans-serif ;
@@ -82,6 +82,10 @@ h1 {
 /* About Section   */
     #about {
         background-color: #F1F0EA;
+    }
+
+    #about h1, h3{
+        text-align: center;
     }
 
     .about-subtitle {
@@ -210,127 +214,226 @@ h1 {
 
 /* FAQ's and Questions Section */
 
-    #questions {
-        /* background-color: #F1F0EA; */
-        margin-bottom: 120px;
-    }
 
+#questions {
+    /* max-width: 1000px; */
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: 5rem;
+    background: white;
+}
 
-    .faq-container {
-        display: flex;
-        /* max-width: 1700px; */
-        max-width: 2200px;
-        /* width: 100%; */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        /* background: #534B52; */
-        border-radius: 8px;
-        overflow: hidden;
-        margin-left: 20rem;
-        margin-right: 20rem;
-        margin-top: 140px;
-        justify-content: center;
-        align-items: center;
+#questions h1 {
+    text-align: center;
+}
+.question-subtext {
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
 
-       
-
+.faq {
+    .faq-item {
+      border-bottom: 1px solid lightgrey;
+      button[aria-expanded='true'] {
+        border-bottom: 2.5px solid #2D232E;
       }
-      
-      /* Sidebar Tabs */
-      .faq-tabs {
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        /* background-color: #534B52; */
-        padding: 1rem;
-        color: #534B52 ;
-
+    }
+    button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em;
+      color: #474448;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+      &:hover, &:focus {
+        cursor: pointer;
+        color: #2D232E;
+        &::after {
+          cursor: pointer;
+          color: #474448;
+          border: 2.3px solid #474448;
+        }
+      }
+      .accordion-title {
+        padding: 1em 1.5em 1em 0;
     
       }
-      
-      .tab-btn {
-        background: E0DDCF;
-        border: none;
-        color: #534B52;
-        padding: 10px 15px;
-        text-align: left;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 4px;
-        margin-bottom: 10px;
-        transition: background 0.3s;
-        height: 70px;
-        font-size: 20px;
-      }
-      
-      .tab-btn:hover, .tab-btn.active {
-        background-color: #534B52;
-        color: #F1F0EA;
-      }
-      
-      /* FAQ Content */
-      .faq-content {
-        flex: 1;
-        padding: 1rem;
-      }
-      
-      .faq-panel {
-        display: none;
-        border-radius: 16px;
-        /* background: #534B52; */
-      }
-      
-      .faq-panel.active {
-        display: block;
-        background: white;
-      }
-      
+      /* + and - button css */
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        /* border: 1px solid; */
+        border-radius: 22px;
+        margin-top: 25px;
 
-      .faq-item {
-        margin-bottom: 10px;
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
+        }
+        &::after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+        }
       }
-      
-      .faq-question {
-        background: #E0DDCF;
-        color: black;
-        border: none;
-        width: 100%;
-        text-align: left;
-        padding: 10px 15px;
-        font-size: 30px;
-        font-style: bold;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: background 0.3s;
-        font-family: "Karla", sans-serif ;
+    }
+    button[aria-expanded='true'] {
+      color: #b72569;
+      .icon {
+        &::after {
+          width: 0;
+          font-weight: 300;
+        }
       }
-      
-      .faq-question:hover {
-        background: #534B52;
-        color: #E0DDCF;
-        transition: background 0.3s;
+      + .accordion-content {
+        opacity: 1;
+        max-height: 10em;
+        transition: all 300ms linear;
+        will-change: opacity, max-height;
       }
-      
-      .faq-answer {
-        padding: 10px 15px;
-        background: #f9f9f9;
-        border-left: 5px solid #b72569;
-        display: none;
-        margin-top: 5px;
-        border-radius: 4px;
-        background: #F1F0EA;
+    }
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 300ms linear, max-height 300ms linear;
+      will-change: opacity, max-height;
+      p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 2em 1rem;
       }
-      
-      .faq-answer li {
-        margin: 0;  
-        color: #534B52;
-        font-size: 25px;
-        font-family: "Karla", sans-serif ;
-        text-align: left;
-        margin-bottom: 10px;
-        padding: 10px;
-      }
-      
-      /* Responsive Design */
+    }
+  }
+
+  .faq-help {
+    font-size: 2rem;
+    padding-top: 3rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .faqhelp-btn {
+    line-height: 150%;
+    display: inline-block;
+    margin-bottom: 0;
+    border: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap; 
+    border-radius: 8px;
+    background-color: #E27EAC;
+    color: white;
+    font-weight: 500;
+    padding: .5rem 1.15rem;
+    width: 130px;
+    height: 45px;
+    font-size: 1.65rem;
+  }
+
+  .faqhelp-btn:hover {
+    background-color: #b72569;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+
+  /* Before Treatment CSS */
+#before h1 {
+    text-align: center;
+}
+.before-items {
+ font-size: 2.1rem;
+}
+.tip-list {
+    font-size: 1.5rem;
+    font-weight: 300;
+    list-style-type: disc;
+    padding: .32rem 2.5rem;
+    line-height: 40px;
+  }
+
+  .before-info {
+    align-content: center;
+    margin: 1rem 5rem auto;
+  }
+
+  .before-card {
+   ul {
+    gap: 24px;
+    width:auto;
+   }
+  }
+
+  .before-img {
+    margin-left: 2rem;
+  }
+
+  .cd-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    h2 {
+        color: white;
+        text-align: center;
+        padding-top: 15rem;
+        font-size: 4.7rem;
+        font-family: 'Blanvad', sans-serif;
+        font-style: italic;
+
+    }
+  }
+  .cd-section--bg-fixed {
+    min-height: 55vh;
+    background-attachment: fixed;
+  }
+  
+  /* backgrounds img */
+  .cd-section {
+    background-image: url("../estheticlyroughdraft/Images/handsOn2.jpg");
+  }
+
+
+/* Aftercare css */
+  #aftercare {
+    background: #F1F0EA;
+  }
+
+  #aftercare h1 {
+    text-align: center;
+  }
+
+  .after-card {
+    align-content: center;
+    margin: 1rem 5rem auto;
+  }
+
+
 
   @media screen and (max-width: 1200px) { 
     .faq-container {
@@ -378,7 +481,7 @@ h1 {
 
     /* css for the buttons that are used to open and close the accordion panel */
     .accordion-list {
-        /* text-align: left; */
+        text-align: left;
         transition: 0.4s;
         font-family: "Karla", sans-serif ;
         padding-top: 100px;
@@ -449,10 +552,76 @@ h1 {
 
 /* -----------=============================================================================== */
 
+/* 12/28 Contact Page */
+
+#contact h1{
+    text-align: center;
+}
+
+.contact-card {
+    /* background-color: var(--white); */
+    text-align: center;
+    border-radius: 20px;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    width: 100%;
+    max-width: 1340px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+.c-grid{
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.d-grid {
+    grid-area: span 1 / span 3 / span 1 / span 3;
+}
+
+.d-grid h3 {
+    text-align: left;
+}
+.grid-3 {
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: stretch;
+}
+.sub-contact {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 860px;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    font-size: 2rem;
+}
+
+.sub-card {
+    text-align: left;
+    font-size: 2rem;
+}
+
+.sub-card h3 {
+    text-align: left;
+}
 
 
-  
 
+
+
+/* ORIGINAL CONTACT PAGE BELOW */
 /* Contact Section --  CSS  */
 
 #contact {
@@ -618,7 +787,7 @@ h1 {
         padding: 20px;
         flex-direction: row-reverse;
         justify-content: center;
-        align-items: center;
+        align-items: center
 
         p {
             margin-left: 15px;
