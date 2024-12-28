@@ -29,19 +29,102 @@ window.onscroll = () => {
 
 
 
+
+
+
+// script for Questions/ Accordion 
+
+// Tab Switching Logic
+const tabButtons = document.querySelectorAll('.tab-btn');
+const faqPanels = document.querySelectorAll('.faq-panel');
+
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all tabs
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active class to clicked tab
+    button.classList.add('active');
+
+    // Show the corresponding FAQ panel
+    const topic = button.dataset.topic;
+    faqPanels.forEach(panel => {
+      panel.classList.toggle('active', panel.id === topic);
+    });
+  });
+});
+
+// Accordion Logic
+// const faqQuestions = document.querySelectorAll('.faq-question');
+
+// faqQuestions.forEach(question => {
+//   question.addEventListener('click', () => {
+//     const answer = question.nextElementSibling;
+//     const isOpen = answer.style.display === 'block';
+//     // Close all answers
+//     document.querySelectorAll('.faq-answer').forEach(a => (a.style.display = 'none'));
+//     // Toggle current answer
+//     answer.style.display = isOpen ? 'none' : 'block';
+//   });
+// });
+
+
+
+
 // Script for the FAQ dropdown
 
-let acc = document.getElementsByClassName("accordion-btn");
-let i;
+// let acc = document.getElementsByClassName("accordion-btn");
+// let i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("btn-active");
-    let panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     this.classList.toggle("btn-active");
+//     let panel = this.nextElementSibling;
+//     if (panel.style.maxHeight) {
+//       panel.style.maxHeight = null;
+//     } else {
+//       panel.style.maxHeight = panel.scrollHeight + "px";
+//     }
+//   });
+// }
+
+
+
+// Script for the About Section Dropdown
+let drop = document.getElementsByClassName("info-btn");
+let d;
+
+for (d = 0; d < drop.length; d++) {
+  drop[d].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      content.style.display = "block";
     }
   });
 }
+
+
+
+
+
+
+// 12/26 
+// Script for FAQ accordion
+
+const items = document.querySelectorAll(".faq button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));

@@ -1,57 +1,85 @@
 * {
     /* padding: 0;
     margin: 0; */
-    background-color: #E0DDCF;
     scroll-behavior: smooth;
 
-  
+}
   
 /*  edar css for hero  */
   
 h1 {
     display: block;
-    font-size: 2em;
+    font-family: 'Klarna', sans-serif;
+    font-weight: 700;
+    font-size: 4.5rem;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-size: 1.25rem;
+    line-height: 1.56;
 }
 
 #hero-section {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
-    flex-direction: column;
     max-inline-size: 960px;
     unicode-bidi: isolate;
-    margin: auto;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    padding-bottom: 3rem;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-img {
-    display: inline-block;
+    border-radius: 25px;
     margin: 10px;
-    max-width: 280px;
     min-width: 230px;
     overflow: hidden;
     position: relative;
-    text-align: center;
-    height: 50vh;
-    width: 100%;
+    height: 40rem;
+    width: 35rem;
     object-fit: cover;
 }
-}
 
 
 
-                                                        /*       Page sections      */
+
+                                               /*       Page sections - Read Comments for Section   */
 
 
       .body-headers {
-          text-align: center;
-          font-size: 85px;
-          font-family: 'The Aesthetic Essential', sans-serif;
+          /* text-align: center; */
+          font-size: 5rem;
+          /* font-family: 'The Aesthetic Essential', sans-serif; */
+          font-family: "Karla", sans-serif ;
+          /* font-weight: 90%; */
           padding-top: 90px;
       }
 
@@ -60,11 +88,131 @@ h1 {
 
 /*  Home/Hero Section */
 
+
+
+/* About Section   */
     #about {
         background-color: #F1F0EA;
     }
 
-/*  Experience / Booking Section   */
+    #about h1, h3{
+        text-align: center;
+    }
+
+    .about-subtitle {
+        font-family: 'Blanvad', sans-serif;
+        font-size: 30px;
+        font-style: italic;
+    }
+
+    .about-container {
+        display: flex;
+        width: auto;
+        padding-bottom: 6rem;
+    }
+
+    .about-img {
+        border: 5px solid grey;
+        border-radius: 12px;
+        margin: 10px;
+        min-width: 230px;
+        overflow: hidden;
+        position: relative;
+        height: 35rem;
+        width: 25rem;
+        object-fit: cover;
+    }
+
+    .about-content {
+        font-size: 20px;
+        text-align: left;
+        font-family: "Karla", sans-serif ;
+        margin-left: 8rem;
+        margin-right: 5rem;
+        padding-top: 10px;
+    }
+
+        /* Style the button that is used to open and close the collapsible content */
+    .info-btn {
+        line-height: 150%;
+        display: inline-block;
+        margin-bottom: 1rem;
+        border: 0;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        white-space: nowrap; 
+        border-radius: 8px;
+        background-color: #E27EAC;
+        color: white;
+        font-weight: 500;
+        padding: .5rem .75rem;
+        font-family: "Karla", sans-serif ;
+    }
+
+    .info-btn:hover {
+        background-color: #b72569;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .info-btn:hover {
+        background-color: #ccc;
+    }
+    
+    /* Style the collapsible content. Note: hidden by default */
+    .info-content {
+        padding:  18px;
+        display: none;
+        overflow: hidden;
+        background-color: #534B52;
+        color: #E0DDCF;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 760px){
+        .about-section {
+            grid-template-columns: 1fr;
+            row-gap: 3fr;
+        }
+        .about-content {
+            justify-content: center;
+        }
+        .info-content {
+            margin: 0 auto;
+        }
+        .about-container {
+            flex-wrap: wrap;
+        }
+      }
+    
+      @media screen and (max-width: 576px) {
+        .abour-section {
+            grid-template-columns: 1fr;
+           
+        }
+        .about-content {
+            width: 100%;
+        }
+
+        .about-container {
+            flex-wrap: wrap;
+            margin-left: -3.5rem;
+        }
+
+        .about-img {
+            height: 29rem;
+             width: 19rem;
+        }
+      }
+
+
+
+
+
+/*  Experience Section   */
 
 
 /*  Projects/Services  */
@@ -75,102 +223,491 @@ h1 {
 
 
 
-/* Contact Section --  CSS  */
+/* FAQ's and Questions Section */
 
 
-/* .contact__container {       ---> OLD, keeping just in case/ may delete later, new one is below...
-    grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-    column-gap: 10rem;
-    padding-bottom: 3rem;
-    display: grid;
-
-} */
-
-.contact__container {
-    /* grid-template-columns: repeat(2, max-content); */
-    column-gap: 10rem;
-    padding-bottom: 3rem;
-    display: flex;
-    align-items: flex-start;
-    justify-items: stretch;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: center;
+#questions {
+    /* max-width: 1000px; */
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: 5rem;
+    background: white;
 }
 
+#questions h1 {
+    text-align: center;
+}
+.question-subtext {
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.faq {
+    .faq-item {
+      border-bottom: 1px solid lightgrey;
+      button[aria-expanded='true'] {
+        border-bottom: 2.5px solid #2D232E;
+      }
+    }
+    button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em;
+      color: #474448;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+      &:hover, &:focus {
+        cursor: pointer;
+        color: #2D232E;
+        &::after {
+          cursor: pointer;
+          color: #474448;
+          border: 2.3px solid #474448;
+        }
+      }
+      .accordion-title {
+        padding: 1em 1.5em 1em 0;
+    
+      }
+      /* + and - button css */
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        /* border: 1px solid; */
+        border-radius: 22px;
+        margin-top: 25px;
+
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
+        }
+        &::after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+        }
+      }
+    }
+    button[aria-expanded='true'] {
+      color: #b72569;
+      .icon {
+        &::after {
+          width: 0;
+          font-weight: 300;
+        }
+      }
+      + .accordion-content {
+        opacity: 1;
+        max-height: 10em;
+        transition: all 300ms linear;
+        will-change: opacity, max-height;
+      }
+    }
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 300ms linear, max-height 300ms linear;
+      will-change: opacity, max-height;
+      p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 2em 1rem;
+      }
+    }
+  }
+
+  .faq-help {
+    font-size: 2rem;
+    padding-top: 3rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .faqhelp-btn {
+    line-height: 150%;
+    display: inline-block;
+    margin-bottom: 0;
+    border: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap; 
+    border-radius: 8px;
+    background-color: #E27EAC;
+    color: white;
+    font-weight: 500;
+    padding: .5rem 1.15rem;
+    width: 130px;
+    height: 45px;
+    font-size: 1.65rem;
+  }
+
+  .faqhelp-btn:hover {
+    background-color: #b72569;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+
+  /* Before Treatment CSS */
+#before h1 {
+    text-align: center;
+}
+.before-items {
+ font-size: 2.1rem;
+}
+.tip-list {
+    font-size: 1.5rem;
+    font-weight: 300;
+    list-style-type: disc;
+    padding: .32rem 2.5rem;
+    line-height: 40px;
+  }
+
+  .before-info {
+    align-content: center;
+    margin: 1rem 5rem auto;
+  }
+
+  .before-card {
+   ul {
+    gap: 24px;
+    width:auto;
+   }
+  }
+
+  .before-img {
+    margin-left: 2rem;
+  }
+
+  .cd-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    h2 {
+        color: white;
+        text-align: center;
+        padding-top: 15rem;
+        font-size: 4.7rem;
+        font-family: 'Blanvad', sans-serif;
+        font-style: italic;
+
+    }
+  }
+  .cd-section--bg-fixed {
+    min-height: 55vh;
+    background-attachment: fixed;
+  }
+  
+  /* backgrounds img */
+  .cd-section {
+    background-image: url("../estheticlyroughdraft/Images/handsOn2.jpg");
+  }
+
+
+/* Aftercare css */
+  #aftercare {
+    background: #F1F0EA;
+  }
+
+  #aftercare h1 {
+    text-align: center;
+  }
+
+  .after-card {
+    align-content: center;
+    margin: 1rem 5rem auto;
+  }
+
+
+
+  @media screen and (max-width: 1200px) { 
+    .faq-container {
+        column-gap: 3rem;
+        margin-right: 10rem;
+          margin-left: 10rem;
+    }
+}
+
+      @media (max-width: 768px) {
+        .faq-container {
+          flex-direction: column;
+          margin-right: 5rem;
+          margin-left: 5rem;
+        }
+      
+        .faq-tabs {
+          width: 100%;
+          flex-direction: row;
+          overflow-x: auto;
+          gap: 1rem;
+          padding: 5px;
+        }
+      
+        .tab-btn {
+          flex: 1;
+          text-align: center;
+          font-size: 20px;
+        }
+        .faq-question {
+            font-size: 26px;
+        }
+      }
+
+       /* -- Small Devices */
+        @media screen and (max-width: 350px) {
+            .faq-container {
+                flex-direction: column;
+                margin-right: 1rem;
+                margin-left: 1rem;
+            }
+        }
+
+    /* CSS for Accordion FAQ list */
+
+    /* css for the buttons that are used to open and close the accordion panel */
+    .accordion-list {
+        text-align: left;
+        transition: 0.4s;
+        font-family: "Karla", sans-serif ;
+        padding-top: 100px;
+        padding-bottom: 90px;
+        width: 74%;
+        align-content: center; 
+        display: flex;
+        flex-direction: column;
+        margin-left: 250px;
+    }
+  
+    .accordion-title {
+        font-family: "Karla", sans-serif ;
+        font-size: 50px;
+    }
+
+
+  /* Adds events to the button if it is clicked on (U need to add the .active class with JS), and when you move the mouse over it (hover) */
+  .btn-active, .accordion-btn:hover {
+    background-color: #534B52;
+    color: #E0DDCF;
+    font-weight: bold;
+    /* font-style: italic; */
+    font-size: 28px;
+  }
+  
+  /* Style for the accordion dropdown. Note: hidden by default */
+  .panel {
+    background-color: #E0DDCF;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    width: 100%;
+  }
+
+  .panel-text {
+    color: #474448;
+    font-size: 25px;
+    font-family: "Karla", sans-serif ;
+    padding: 22px;
+  }
+
+  .accordion-btn {
+    font-family: "Karla", sans-serif ;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    transition: 0.4s;
+    height: 80px;
+    padding-left: 15px;
+    
+  }
+
+  .accordion-btn:after {
+    content: '\02795'; /* this adds Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .btn-active:after {
+    content: "\2796"; /* and adds Unicode character for "minus" sign (-) */
+  }
+
+
+
+/* -----------=============================================================================== */
+
+/* 12/28 Contact Page */
+
+#contact h1{
+    text-align: center;
+}
+
+.contact-card {
+    /* background-color: var(--white); */
+    text-align: center;
+    border-radius: 20px;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    width: 100%;
+    max-width: 1340px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+.c-grid{
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.d-grid {
+    grid-area: span 1 / span 3 / span 1 / span 3;
+}
+
+.d-grid h3 {
+    text-align: left;
+}
+.grid-3 {
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: stretch;
+}
+.sub-contact {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 860px;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    font-size: 2rem;
+}
+
+.sub-card {
+    text-align: left;
+    font-size: 2rem;
+}
+
+.sub-card h3 {
+    text-align: left;
+}
+
+
+
+
+
+/* ORIGINAL CONTACT PAGE BELOW */
+/* Contact Section --  CSS  */
+
+#contact {
+    background-color: #F1F0EA;
+}
 
 .contact__title {
     text-align: center;
     font-size: 50px;
     font-weight: 75%;
     margin-bottom: 35px;
-    /* font-family: 'Segoe UI', sans-serif; */
-    font-family: 'The Aesthetic Essential', sans-serif;
-    color: #2D232E;
-                                                
-}
-.contact__info {
-    display: block;
-    row-gap: 1rem;
-    grid-template-columns: 300px;
-}
-
-.contact__card {
-    background-color: var(--container-color);
-    border: 10px solid rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    border-radius: 1.75rem;
-    text-align: center;
-    margin-bottom: 32px;
-    transition: .3s;
-}
-
-.contact__card p{
-    font-size: 34px;
-}
-.contact__card:hover {
-    border-color: gray; 
-    color: white;
-    background: transparent;
-}
-
-/* .contact__card:hover, 
-.contact__card-title:hover, 
-.contact__card-data:hover, 
-.contact__button:hover {
-    border-color: gray; 
-    color: white;
-    background: transparent; 
-    background: grey;
-} */
-
-#map-frame {
-    /* width: auto;  */
-    width: 485px;
-    height: 650px;
-}
-
-.contact__card-icon {
-    font-size: 2rem;
-    color: var(--title-color);
-    margin-bottom: 25;
-}
-
-.contact__card-title{
-    font-size: 40px;
-    
+    font-family: "Karla", sans-serif ;
+    color: #2D232E;                                           
 }
 
 .contact__card-data {
     font-size: 34px;
     color: #534B52;
-}
-.contact__card-data {
-    display: block;
+    /* display: block; */
     margin-bottom: 85px;
+    text-align: center;
+    padding: 17px;
 }
+
+/* new stuff as of 12/9 */
+
+.contact-maincard {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.card {
+    /* flex: 1 1 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #fff;
+    width: 600px;
+    height: 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #534B52;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-titles {
+    text-align: center;
+    font-size: 50px;
+    font-style: bold;
+    margin-top: 19px;
+    margin-bottom: 35px;
+    font-family: "Karla", sans-serif ;
+    color: #E0DDCF;
+}
+
+.contact__card-data {
+    font-size: 34px;
+    color: #E0DDCF;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 17px;
+}
+
 .contact__button {
     color: var(--text-color);
     font-size: 20px;
@@ -188,97 +725,120 @@ h1 {
     transform: translate(0.25rem);
 }
 
-.contact__content {
-    width: 560px;
-    /* font-family: 'Segoe UI', sans-serif; */
-    font-family: 'The Aesthetic Essential', sans-serif;
-    margin-property: 20px;
-    
+.map-info {
+    font-size: 33px;
+    font-family: "Karla", sans-serif ;
+    color: #534B52;
+    line-spacing: 1px;
 }
 
+#map-frame {
+    width: 1100px;
+    height: 650px;
+    border-radius: 16px;
+}
 
-/* CSS for Accordion FAQ list */
+#ig-icon {
+    color: white;
+}
 
-    /* css for the buttons that are used to open and close the accordion panel */
-.accordion-list {
-    text-align: left;
-    transition: 0.4s;
-    font-family: 'The Aesthetic Essential', sans-serif;
-    padding-top: 100px;
-  }
-  
-  /* Adds events to the button if it is clicked on (U need to add the .active class with JS), and when you move the mouse over it (hover) */
-  .btn-active, .accordion-btn:hover {
-    background-color: #F1F0EA;
-    color: #534B52;
-    font-weight: bold;
-    /* font-style: italic; */
-  }
-  
-  /* Style for the accordion dropdown. Note: hidden by default */
-  .panel {
-  background-color: #E0DDCF;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  }
+.location-title {
+    font-family: "Karla", sans-serif ;
+    color: #2D232E;
+}
 
-  .accordion-btn {
-    font-family: 'The Aesthetic Essential', sans-serif;
-    font-size: 80px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 25px;
-    transition: 0.4s;
-    height: 80px;
-    padding-left: 15px;
-  }
-
-  .accordion-btn:after {
-    content: '\02795'; /* this adds Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .btn-active:after {
-    content: "\2796"; /* and adds Unicode character for "minus" sign (-) */
-  }
 
 
 
 
 /*  Breakpoints */
   /*  -- Large Devices */
+  @media screen and (max-width: 1200px) { 
+    .contact-maincard {
+        margin-left: 4rem;
+        gap: 7px;
+        padding: 10px;
+    
+    }
+
+    .card{
+        height: 27rem;
+        width: 35rem;
+        padding: 20px;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+    }
+    .card-titles {
+        font-size: 34px;
+    }
+    .fa {
+        padding: 13px;
+        font-size: 3px;
+        align-item: center;
+    }
+  }
+
   @media screen and (max-width: 992px) { 
-    .contact__container {
-        column-gap: 3rem;
+    .contact-maincard {
+        margin-left: 10rem;
+        gap: 7px;
+        padding: 27px;
+        flex-direction: column-reverse;
+    }
+
+    .card{
+        height: 20rem;
+        width: 28rem;
+        padding: 20px;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center
+
+        p {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
     }
   }
 
   /* -- Medium Devices */
 
-  @media screen and (max-width: 760px){
-    .contact__container {
-        grid-template-columns: 1fr;
-        row-gap: 3fr;
+  @media screen and (max-width: 766px){
+    .contact-maincard {
+        gap: 4px;
+        padding: 20px;
+        flex-direction: column-reverse;
+        margin-left: 2rem;
     }
-    .contact__info {
+
+    .card{
+        height: 20rem;
+        width: 28rem;
+        padding: 20px;
+        flex-direction: row-reverse;
         justify-content: center;
+        align-items: center;
+
+        p {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
     }
-    .contact__form {
-        margin: 0 auto;
-    }
+    
   }
 
   @media screen and (max-width: 576px) {
-    .contact__info {
-        grid-template-columns: 1fr;
-    }
-    .contact__form {
-        width: 100%;
+    .contact-maincard {
+        flex-direction: column-reverse;
+        padding: 25px;
+        font-size: 25px;
+        margin-left: 13rem;
     }
   }
 
@@ -286,3 +846,62 @@ h1 {
   @media screen and (max-width: 350px) {
   }
 
+
+
+  #footer {
+    background: #534B52;
+  }
+
+
+  /* Footer CSS */
+
+  .footer-content {
+    height: 280px;
+    font-family: "Karla", sans-serif ;
+    color: #E0DDCF;
+    position: relative;
+    bottom: 0;
+    /* margin-top: 12rem; */
+    
+  }
+
+  .footer-sub {
+    /* z-index: 0;
+    bottom: 0px;
+    left: 2.5%;
+    height: 320px;
+    width: 95%;
+    padding-left: 0.7125rem;
+    padding-right: 0.7125rem;
+    text-align: left; */
+  }
+
+  .footer-card {
+    flex-flow: column wrap;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: center;
+    margin-top: 3rem;
+    
+  }
+
+
+  .footer-data2 ul{
+
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+    list-style: none;
+    margin-top: 4rem;
+    text-align: center;
+
+  }
+
+
+  
