@@ -687,7 +687,7 @@ h1 {
     .about-container {
         flex-wrap: wrap;
     }
-  }
+  
 
 
 
@@ -847,6 +847,7 @@ h1 {
             }
         }
     }
+}
 
 
 
