@@ -6,3 +6,19 @@
         display: flex;
     }
 }
+
+@media  (max-width:767.98px) {
+    #hero-section {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    #hero-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Optional, for better alignment */
+    }
+
+    .hero-img {
+        margin-top: 20px; /* Add spacing between text and image */
+    }
+}

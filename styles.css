@@ -66,6 +66,7 @@ h1 {
     height: 40rem;
     width: 35rem;
     object-fit: cover;
+    z-index: 10;
 }
 
 
@@ -794,11 +795,13 @@ h1 {
             color: #F1F0EA;
             text-shadow: 3px 4px black;
         }
-    }
-    .cd-section--bg-fixed {
+  }
+
+/*     } */
+/*     .cd-section--bg-fixed {
         min-height: 56vh;
         background-attachment: fixed;
-    }
+    } */
 
     /* FAQ Section */
     #questions {
