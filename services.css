@@ -25,6 +25,7 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: stretch;
   list-style-type: none;
+  max-height: fit-content;
 }
 
 .serviceItem {
@@ -43,6 +44,7 @@ h2 {
   white-space: normal;
   box-shadow: 1;
   text-align: left;
+  max-height: 23rem;
 }
 
 .serviceItemHeader {
