@@ -604,6 +604,32 @@ h1 {
 
 
 
+  /* Scroll Button - Bottom Right */
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 45px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #534B52;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 13px;
+    font-size: 33px;
+    opacity: .40;
+  }
+  
+  #myBtn:hover {
+    background-color: #F1F0EA;
+    color: #b72569;
+    opacity: .80;
+  }
+
   
   /* Media - Mobile Responsiveness for Large, Med, Small Devices  */
 

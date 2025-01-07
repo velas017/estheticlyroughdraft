@@ -21,6 +21,9 @@
 </head>
 
 <body>
+    <!-- Scroll Btn -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+
     <!-- beginning of my nav edit accordingly  -->
     <nav id="desktop-nav">
         <div class="logo">EstheticLY</div>
@@ -30,6 +33,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Services</a></li>
+                <li><a href="#before">Prep + Aftercare</a></li>
                 <li><a href="#questions">Learn More</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -48,9 +52,12 @@
                 <span></span>
             </div>
             <div class="menu-links">
+                <li><a class="bookingBtn" href="#book" onclick="toggleMenu()">Book Now</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#before" onclick="toggleMenu()">Prep + Aftercare</a></li>
+                <li><a href="#questions" onclick="toggleMenu()">Learn More</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
@@ -69,6 +76,8 @@
         <div>
         </div>
     </div>
+
+
 <!-- services section with product cards -->
 <h2>Services</h2>
 
@@ -262,7 +271,7 @@
               <div class="faq-item">
                 <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Which facial should I book?</span><span class="icon" aria-hidden="true"></span></button>
                 <div class="accordion-content">
-                  <p>If this is your first facial, any customized facial is ideal. During the skin analysis, I will be looking closely to determine the current condition of the skin, it's sensitivities, and underlying issues and begin the journey to ensure you are getting the treatment suited for your skin.</p>
+                  <p>If this is your first facial, any customized facial is ideal. During the skin analysis, I will be looking closely to determine the current condition of the skin, it's sensitivities, and underlying issues to ensure you are getting the treatment best suited for your skin.</p>
                 </div>
               </div>
             </div>
