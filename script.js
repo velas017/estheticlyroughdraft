@@ -28,10 +28,6 @@ window.onscroll = () => {
 }
 
 
-
-
-
-
 // script for Questions/ Accordion 
 
 // Tab Switching Logic
@@ -53,41 +49,6 @@ tabButtons.forEach(button => {
   });
 });
 
-// Accordion Logic
-// const faqQuestions = document.querySelectorAll('.faq-question');
-
-// faqQuestions.forEach(question => {
-//   question.addEventListener('click', () => {
-//     const answer = question.nextElementSibling;
-//     const isOpen = answer.style.display === 'block';
-//     // Close all answers
-//     document.querySelectorAll('.faq-answer').forEach(a => (a.style.display = 'none'));
-//     // Toggle current answer
-//     answer.style.display = isOpen ? 'none' : 'block';
-//   });
-// });
-
-
-
-
-// Script for the FAQ dropdown
-
-// let acc = document.getElementsByClassName("accordion-btn");
-// let i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     this.classList.toggle("btn-active");
-//     let panel = this.nextElementSibling;
-//     if (panel.style.maxHeight) {
-//       panel.style.maxHeight = null;
-//     } else {
-//       panel.style.maxHeight = panel.scrollHeight + "px";
-//     }
-//   });
-// }
-
-
 
 // Script for the About Section Dropdown
 let drop = document.getElementsByClassName("info-btn");
@@ -104,10 +65,6 @@ for (d = 0; d < drop.length; d++) {
     }
   });
 }
-
-
-
-
 
 
 // 12/26 
@@ -128,3 +85,26 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+//1/6 
+//Script for Scroll to Top feature on bottom rightside
+
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
