@@ -634,6 +634,20 @@ h1 {
   
   /* Media - Mobile Responsiveness for Large, Med, Small Devices  */
 
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5){
+
+    html,
+    body {
+        width:100%;
+        overflow-x:hidden;
+        }
+    }
+
+
   @media screen and (max-width: 3000px) { 
 
     /* body {
@@ -653,12 +667,17 @@ h1 {
 
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:770px) {
         
     body {
         width: 100%;
+        /* width: auto; */
     } 
 
+    /* .hero-img {
+        width: 24rem;
+        height: 30rem;
+    } */
 
     /* About Section */
     #about h1{
