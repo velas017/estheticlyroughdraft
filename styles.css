@@ -216,7 +216,6 @@ h1 {
 
 /* FAQ's and Questions Section */
 
-
 #questions {
     /* max-width: 1000px; */
     max-width: 66rem;
@@ -239,6 +238,7 @@ h1 {
     font-size: 1.75rem;
     font-weight: 250;
     text-align: center;
+    padding-bottom: 3rem;
 }
 
 .faq {
@@ -377,53 +377,111 @@ h1 {
   }
 
 
-  /* Before Treatment CSS */
-#before h1 {
+  /* Treatment Prep CSS */
+
+.prep h1 {
     text-align: center;
     font-family: "Karla", sans-serif ;
     font-weight: 870;
     color: #534B52;
+    font-size: 4.5rem;
 }
-    .before-items {
-    font-size: 2.1rem;
-    }
-.tip-list {
+.prep:before, 
+.prep:after {
+    box-sizing: border-box;
+}
+
+.prep {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.prep li {
+    margin: 0 0 13px 0;
+    /* list-style-type: '\2727'; */
+}
+
+.text-list {
     font-size: 1.5rem;
     font-weight: 300;
-    list-style-type: disc;
+    list-style-type: none;
     padding: .32rem 2.5rem;
-    line-height: 40px;
+    line-height: 42px;
+}
+  .center { text-align: center; }
+  
+  .container {
+    width: 95%;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+  
+  .info-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+  }
+  
+  .text-number {
+    font-size: 8rem;
+    font-weight: 870;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: calc(5vw + 20px);
+    transition: all 0.4s ease-in;
+    color: #534B52;
+  }
+  
+  .text-content {
+    border-top: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    padding: 15px 0;
+  }
+  
+  .text-content .title {
+    font-weight: 600;
+    font-size: 25px;
+    /* padding-top: 40px; */
+  }
+  
+  .text-section {
+    line-height: 22px;
   }
 
-  .before-info {
-    align-content: center;
-    margin: 1rem 5rem auto;
+  
+  
+  @media (max-width: 600px) {
+    .text-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .text-content .text-section {
+      font-size: 15px;
+    }
   }
 
-  .before-card {
-   ul {
-    gap: 24px;
-    width:auto;
-   }
-  }
 
-  .before-img {
-    margin-left: 2rem;
-  }
-
+/* img mid section  */
   .cd-section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    
 
     h2 {
         color: white;
         text-align: center;
+        padding: 3rem;
         padding-top: 15rem;
         font-size: 4.7rem;
         font-family: 'Blanvad', sans-serif;
         font-style: italic;
-
     }
   }
   .cd-section--bg-fixed {
@@ -431,7 +489,7 @@ h1 {
     background-attachment: fixed;
   }
   
-  /* backgrounds img */
+ /* backgrounds img */
   .cd-section {
     background-image: url("./Images/handsOn2.jpg");
   }
@@ -447,6 +505,7 @@ h1 {
         color: #2D232E;
         font-family: "Karla", sans-serif ;
         font-weight: 870;
+        font-size: 4.5rem;
         color: #534B52;
     }
 
@@ -455,7 +514,26 @@ h1 {
         margin: 1rem 5rem auto;
     }
 
+
+    .before-items {
+        font-size: 2.1rem;
+    }
+    .tip-list {
+        font-size: 1.5rem;
+        font-weight: 300;
+        list-style-type: none;
+        padding: .32rem 2.5rem;
+        line-height: 42px;
+      }
+    
+      .before-info {
+        align-content: center;
+        margin: 1rem 5rem auto;
+      }
+    
   
+
+
 
 /* 12/28  - Contact Section CSS*/
 
@@ -643,7 +721,8 @@ h1 {
     html,
     body {
         width:100%;
-        overflow-x:hidden;
+        /* overflow-x:hidden; */
+        overflow-x: visible;
         }
     }
 
@@ -738,11 +817,16 @@ h1 {
 
 
     /* Before Facial Section */
-    #before h1 {
+
+    .prep {
+        font-family: "Karla", sans-serif ;
+        margin: 1.5rem .5rem auto;
+    }
+     .prep h1 {
         font-size: 2.6rem;
         font-family: "Karla", sans-serif ;
         margin-right: 1.3rem;
-    }
+    } 
 
     .before-items {
         font-size: 1.72rem;
@@ -753,17 +837,18 @@ h1 {
         line-height: 28px;
         }
        
-    .before-info {
+     .container {
         align-content: center;
-        margin: 1.5rem .5rem auto;
-        padding: 2rem;
-         }
+        /* margin: 1.5rem .5rem auto; */
+        padding: 0;
+        margin: 0;
+    }
        
-    .before-card {
-        ul {
+    .prep {
+        /* ul {
         gap: 24px;
         width:auto;
-    }
+    } */
 
     .question-subtext {
         font-size: 1.15rem;
@@ -771,8 +856,41 @@ h1 {
         text-align: center;
         padding: 1rem;
         padding-right: 2rem;
+        }
     }
-         
+
+    .info-card {
+        padding: 0;
+    }
+
+    .text-number {
+        font-size: 3rem;
+        font-weight: 870;
+        padding: 6px 0;
+    }
+
+    .text-content {
+        border-top: 2px solid black;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 15px 0;
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2D232E;
+        }
+        .text-list {
+            padding: 0;
+            line-height: 24px;
+            font-size: 18px;
+            font-weight: 330;
+
+            li {
+                list-style-type: none;
+            }
+        }
     }
 
     /* Aftercare Section */
@@ -809,7 +927,7 @@ h1 {
 
         h2 {
             padding-top: 9.2rem;
-            padding-right: 1rem;
+            padding-right: 1.2rem;
             font-size: 3.6rem;
             color: #F1F0EA;
             text-shadow: 3px 4px black;
