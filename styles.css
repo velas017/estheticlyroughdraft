@@ -86,11 +86,101 @@ h1 {
     
     */
 
-      .body-headers {
-          font-size: 5rem;
-          font-family: "Karla", sans-serif ;
-          padding-top: 90px;
+.body-headers {
+    font-size: 5rem;
+    font-family: "Karla", sans-serif ;
+    padding-top: 90px;
+    }
+
+/* service shit */
+
+
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+    padding-bottom: 6rem;
+    font-family: "Karla", sans-serif ;
+  
+    > div {
+      flex: 0 0 190px;
+      border-radius: 0.5rem;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+      box-shadow: 1px 5px 15px #b72569;
+      position: relative;
+      overflow: hidden;
+  
+      &:nth-of-type(1) {
+        background: url("./Images/amy@work.png")
+          no-repeat 50% / cover;
       }
+      &:nth-of-type(2) {
+        background: url("./Images/IMG_1593.jpeg")
+          no-repeat 50% / cover;
+      }
+      &:nth-of-type(3) {
+        background: url("./Images/brows2.jpg")
+          no-repeat 50% / cover;
+      }
+      &:nth-of-type(4) {
+        background: url("./Images/facial.jpg")
+          no-repeat 50% / cover;
+      }
+      &:nth-of-type(5) {
+        background: url("./Images/IMG_1500.jpg")
+          no-repeat 50% / cover;
+      }
+      &:nth-of-type(6) {
+        background: url("./Images/brows3.jpg")
+          no-repeat 50% / cover;
+      }
+  
+      .content {
+        font-size: 1.5rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        opacity: 0;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        background: rgb(2, 2, 46);
+        background: linear-gradient(
+          0deg,
+          rgba(2, 2, 46, 0.6755077030812324) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: translatey(100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+  
+        p {
+          display: block;
+          margin-top: 5px;
+          font-size: 1.2rem;
+        }
+      }
+  
+      &:hover {
+        flex: 0 0 250px;
+        box-shadow: 1px 3px 15px #534B52;
+        transform: translatey(-30px);
+      }
+  
+      &:hover .content {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+      }
+    }
+  }
+
+
+
 
 
 
@@ -140,6 +230,7 @@ h1 {
         object-fit: cover;
     }
 
+    
     .about-content {
         font-size: 20px;
         text-align: left;
@@ -220,7 +311,6 @@ h1 {
 
 /* FAQ's and Questions Section */
 
-
 #questions {
     /* max-width: 1000px; */
     max-width: 66rem;
@@ -243,6 +333,7 @@ h1 {
     font-size: 1.75rem;
     font-weight: 250;
     text-align: center;
+    padding-bottom: 3rem;
 }
 
 .faq {
@@ -381,53 +472,112 @@ h1 {
   }
 
 
-  /* Before Treatment CSS */
-#before h1 {
+  /* Treatment Prep CSS */
+
+.prep h1 {
     text-align: center;
     font-family: "Karla", sans-serif ;
     font-weight: 870;
     color: #534B52;
+    font-size: 4.5rem;
 }
-    .before-items {
-    font-size: 2.1rem;
-    }
-.tip-list {
+.prep:before, 
+.prep:after {
+    box-sizing: border-box;
+}
+
+.prep {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.prep li {
+    margin: 0 0 13px 0;
+    /* list-style-type: '\2727'; */
+}
+
+.text-list {
     font-size: 1.5rem;
     font-weight: 300;
     list-style-type: disc;
     padding: .32rem 2.5rem;
-    line-height: 40px;
+    line-height: 42px;
+}
+  .center { text-align: center; }
+  
+  .container {
+    width: 95%;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+  
+  .info-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+  }
+  
+  .text-number {
+    font-size: 8rem;
+    font-weight: 870;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: calc(5vw + 20px);
+    transition: all 0.4s ease-in;
+    color: #534B52;
+  }
+  
+  .text-content {
+    border-top: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    padding: 15px 0;
+  }
+  
+  .text-content .title {
+    font-weight: 600;
+    font-size: 25px;
+    /* padding-top: 40px; */
+  }
+  
+  .text-section {
+    line-height: 22px;
   }
 
-  .before-info {
-    align-content: center;
-    margin: 1rem 5rem auto;
+  
+  
+  @media (max-width: 600px) {
+    .text-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .text-content .text-section {
+      font-size: 15px;
+    }
   }
 
-  .before-card {
-   ul {
-    gap: 24px;
-    width:auto;
-   }
-  }
 
-  .before-img {
-    margin-left: 2rem;
-  }
-
+/* img mid section  */
   .cd-section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    
 
     h2 {
-        color: white;
+        color: #F1F0EA;
         text-align: center;
-        padding-top: 15rem;
+        padding: 3rem;
+        padding-top: 17rem;
         font-size: 4.7rem;
         font-family: 'Blanvad', sans-serif;
         font-style: italic;
-
+        text-shadow: 2px 4px lightpink;
     }
   }
   .cd-section--bg-fixed {
@@ -435,7 +585,7 @@ h1 {
     background-attachment: fixed;
   }
   
-  /* backgrounds img */
+ /* backgrounds img */
   .cd-section {
     background-image: url("./Images/handsOn2.jpg");
   }
@@ -451,6 +601,7 @@ h1 {
         color: #2D232E;
         font-family: "Karla", sans-serif ;
         font-weight: 870;
+        font-size: 4.5rem;
         color: #534B52;
     }
 
@@ -459,7 +610,26 @@ h1 {
         margin: 1rem 5rem auto;
     }
 
+
+    .before-items {
+        font-size: 2.1rem;
+    }
+    .tip-list {
+        font-size: 1.5rem;
+        font-weight: 300;
+        list-style-type: none;
+        padding: .32rem 2.5rem;
+        line-height: 42px;
+      }
+    
+      .before-info {
+        align-content: center;
+        margin: 1rem 5rem auto;
+      }
+    
   
+
+
 
 /* 12/28  - Contact Section CSS*/
 
@@ -638,31 +808,28 @@ h1 {
   
   /* Media - Mobile Responsiveness for Large, Med, Small Devices  */
 
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5){
+
+    html,
+    body {
+        width:auto;
+        overflow-x:hidden;
+        /* overflow-x: visible; */
+        
+        }
+    }
+
+
   @media screen and (max-width: 3000px) { 
 
-    /* body {
-        width: 100%;
-    }
-
-     #about h1{
-        font-size: 2.6rem;
-    }
-
-    #about h3 {
-        font-size: 1.2rem;
-        width: 200px;
-        margin-left: 5.7rem;
-        padding-top: 30px;
-    } */
 
 }
 
-@media screen and (max-width:600px) {
-        
-    body {
-        width: 100%;
-    } 
-
+@media screen and (max-width:770px) {
 
     /* About Section */
     #about h1{
@@ -672,18 +839,22 @@ h1 {
     #about h3 {
         font-size: 1.2rem;
         width: 200px;
-        margin-left: 5.7rem;
+        margin-left: 5.55rem;
         padding-top: 30px;
     }
 
-    .about-container {
+    #about h4 {
+        font-weight: 750;
+    }
 
+    .about-container {
 
         .about-img {
             /* border: 5px solid grey; */
             border: 5px #F1F0EA;
             box-shadow: 8px 5px #534b52;
             margin: 7px;
+            margin-left: 2.8rem;
             min-width: 230px;
             height: 25rem;
             width: 15rem;
@@ -693,9 +864,10 @@ h1 {
         .about-content {
             font-size: 16px;
             text-align: left;
-            margin-left: 6.4rem;
-            margin-right: 4rem;
+            margin-left: 4.7rem;
+            margin-right: 2rem;
             padding-top: 10px;
+            width: 100%;
         }
 
         .info-content {
@@ -721,13 +893,19 @@ h1 {
   
 
 
+    /* Book your appointment  */
 
     /* Before Facial Section */
-    #before h1 {
+
+    .prep {
+        font-family: "Karla", sans-serif ;
+        margin: 1.5rem .5rem auto;
+    }
+     .prep h1 {
         font-size: 2.6rem;
         font-family: "Karla", sans-serif ;
         margin-right: 1.3rem;
-    }
+    } 
 
     .before-items {
         font-size: 1.72rem;
@@ -738,26 +916,56 @@ h1 {
         line-height: 28px;
         }
        
-    .before-info {
+     .container {
         align-content: center;
-        margin: 1.5rem .5rem auto;
-        padding: 2rem;
-         }
-       
-    .before-card {
-        ul {
-        gap: 24px;
-        width:auto;
+        /* margin: 1.5rem .5rem auto; */
+        padding: 0;
+        margin: 0;
     }
+       
+    .prep {
 
     .question-subtext {
         font-size: 1.15rem;
         font-weight: 250;
         text-align: center;
-        padding: 1rem;
-        padding-right: 2rem;
+        padding: 1.2rem;
+        padding-right: 1.6rem;
+        }
     }
-         
+
+    .info-card {
+        padding: 0;
+    }
+
+    .text-number {
+        font-size: 3rem;
+        font-weight: 870;
+        padding: 6px 0;
+    }
+
+    .text-content {
+        border-top: 2px solid black;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 15px 0;
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2D232E;
+        }
+        .text-list {
+            padding: 0;
+            line-height: 24px;
+            font-size: 18px;
+            font-weight: 330;
+
+            li {
+                list-style-type: disc;
+            }
+        }
     }
 
     /* Aftercare Section */
@@ -794,7 +1002,7 @@ h1 {
 
         h2 {
             padding-top: 9.2rem;
-            padding-right: 1rem;
+            padding-right: 1.2rem;
             font-size: 3.6rem;
             color: #F1F0EA;
             text-shadow: 3px 4px black;
@@ -809,8 +1017,8 @@ h1 {
 
     /* FAQ Section */
     #questions {
-        padding: 1.5rem;
-        padding-right: 3rem;
+        padding: 1.2rem;
+        padding-right: 2rem;
 
         h1 {
             font-size: 4.3rem;
@@ -888,6 +1096,7 @@ h1 {
     /* -- Small Devices */
 
     @media screen and (max-width: 420px) {
+
         .abour-section {
             grid-template-columns: 1fr;
            
