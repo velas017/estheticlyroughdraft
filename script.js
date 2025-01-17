@@ -108,3 +108,9 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    // script for service img carousel
+    $('input').on('change', function() {
+        $('body').toggleClass('blue');
+      });
+      
