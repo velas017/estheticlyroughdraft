@@ -108,3 +108,27 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+// Hero Book now button scroll feature -- Edar 
+
+// const heroBookNowBtn = document.querySelector('.bookingBtn');
+// const bookingH1 = Array.from(document.querySelectorAll('h1')).find(h1 =>
+//   h1.textContent.includes("Book your Appointment")
+// );
+
+// if (heroBookNowBtn && bookingH1) {
+//   heroBookNowBtn.addEventListener('click', () => {
+//     bookingH1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//   });
+// } else {
+//   console.error('Button or target element not found!');
+// }
+
+// Hero learn more button scroll feature -- Edar 
+
+let heroLearnMoreBtn = document.getElementsByClassName('learnMoreBtn')
+
+
+
+
+

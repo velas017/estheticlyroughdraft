@@ -23,21 +23,24 @@ h1 {
     font-weight: bold;
     unicode-bidi: isolate;
     letter-spacing: -1px;
-    line-height: 1.1;
+    line-height: 1;
+    height: 2;
     margin-bottom: 1.25rem;
     margin-top: 0;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .hero-text {
+    font-size: 1.25rem;
     margin-top: 0;
     margin-bottom: 1rem;
     margin-block-start: 1rem;
     margin-block-end: 1rem;
     margin-inline-start: 0;
     margin-inline-end: 0;
-    line-height: 1.56;
+    line-height: 1.5;
 }
 
 #hero-section {
@@ -70,7 +73,6 @@ h1 {
     object-fit: cover;
     z-index: 10;
 }
-
 
 
 
@@ -569,7 +571,7 @@ h1 {
     
   }
 
-  .footer-sub {
+  /* .footer-sub {
     /* z-index: 0;
     bottom: 0px;
     left: 2.5%;
@@ -578,7 +580,7 @@ h1 {
     padding-left: 0.7125rem;
     padding-right: 0.7125rem;
     text-align: left; */
-  }
+  /* } */ */
 
   .footer-card {
     flex-flow: column wrap;
