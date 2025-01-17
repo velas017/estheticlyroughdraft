@@ -4,6 +4,10 @@
     scroll-behavior: smooth;
 
 }
+
+body{
+  margin: 0;
+}
   
 /*  edar css for hero  */
   
@@ -11,7 +15,7 @@ h1 {
     display: block;
     font-family: 'Klarna', sans-serif;
     font-weight: 700;
-    font-size: 4.5rem;
+    font-size: calc(1.6125rem + 4.35vw);
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
@@ -27,14 +31,12 @@ h1 {
 }
 
 .hero-text {
-    font-weight: bold;
     margin-top: 0;
     margin-bottom: 1rem;
     margin-block-start: 1rem;
     margin-block-end: 1rem;
     margin-inline-start: 0;
     margin-inline-end: 0;
-    font-size: 1.25rem;
     line-height: 1.56;
 }
 
