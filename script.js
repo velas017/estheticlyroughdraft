@@ -132,8 +132,5 @@ let heroLearnMoreBtn = document.getElementsByClassName('learnMoreBtn')
 
 
 
-    // script for service img carousel
-    $('input').on('change', function() {
-        $('body').toggleClass('blue');
-      });
+
 
