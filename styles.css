@@ -92,96 +92,6 @@ h1 {
     padding-top: 90px;
     }
 
-/* service shit */
-
-
-.carousel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    gap: 10px;
-    padding-bottom: 6rem;
-    font-family: "Karla", sans-serif ;
-  
-    > div {
-      flex: 0 0 190px;
-      border-radius: 0.5rem;
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
-      box-shadow: 1px 5px 15px #b72569;
-      position: relative;
-      overflow: hidden;
-  
-      &:nth-of-type(1) {
-        background: url("./Images/amy@work.png")
-          no-repeat 50% / cover;
-      }
-      &:nth-of-type(2) {
-        background: url("./Images/IMG_1593.jpeg")
-          no-repeat 50% / cover;
-      }
-      &:nth-of-type(3) {
-        background: url("./Images/brows2.jpg")
-          no-repeat 50% / cover;
-      }
-      &:nth-of-type(4) {
-        background: url("./Images/facial.jpg")
-          no-repeat 50% / cover;
-      }
-      &:nth-of-type(5) {
-        background: url("./Images/IMG_1500.jpg")
-          no-repeat 50% / cover;
-      }
-      &:nth-of-type(6) {
-        background: url("./Images/brows3.jpg")
-          no-repeat 50% / cover;
-      }
-  
-      .content {
-        font-size: 1.5rem;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        opacity: 0;
-        flex-direction: column;
-        height: 100%;
-        justify-content: flex-end;
-        background: rgb(2, 2, 46);
-        background: linear-gradient(
-          0deg,
-          rgba(2, 2, 46, 0.6755077030812324) 0%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        transform: translatey(100%);
-        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
-        visibility: hidden;
-  
-        p {
-          display: block;
-          margin-top: 5px;
-          font-size: 1.2rem;
-        }
-      }
-  
-      &:hover {
-        flex: 0 0 250px;
-        box-shadow: 1px 3px 15px #534B52;
-        transform: translatey(-30px);
-      }
-  
-      &:hover .content {
-        opacity: 1;
-        transform: translatey(0%);
-        visibility: visible;
-      }
-    }
-  }
-
-
-
-
 
 
 
@@ -574,10 +484,11 @@ h1 {
         text-align: center;
         padding: 3rem;
         padding-top: 17rem;
-        font-size: 4.7rem;
+        font-size: 6.2rem;
         font-family: 'Blanvad', sans-serif;
         font-style: italic;
-        text-shadow: 2px 4px lightpink;
+        font-weight: 900;
+        text-shadow: 3px 5px lightpink;
     }
   }
   .cd-section--bg-fixed {
