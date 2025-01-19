@@ -735,8 +735,22 @@ h1 {
     }
 
 
-  @media screen and (max-width: 3000px) { 
+  @media screen and (max-width: 1024px) { 
 
+    .about-container {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .about-img {
+        border: 5px #F1F0EA;
+        box-shadow: 12px 8px #534b52;
+        margin: 7px;
+        margin-left: 11rem;
+        min-width: 230px;
+        height: 57.35vw;
+        width: 40vw;
+    }
 
 }
 
@@ -763,7 +777,7 @@ h1 {
         .about-img {
             /* border: 5px solid grey; */
             border: 5px #F1F0EA;
-            box-shadow: 8px 5px #534b52;
+            box-shadow: 9px 8px #534b52;
             margin: 7px;
             margin-left: 2.8rem;
             min-width: 230px;
@@ -782,26 +796,31 @@ h1 {
         }
 
         .info-content {
-            padding:  18px;
+            padding: 18px;
             font-size: 16px;
             font-weight: 250;
+            margin-right: 23.6vw;
         }
     }
 
     .about-section {
         grid-template-columns: 1fr;
-        row-gap: 3fr;
+        row-gap: 3vw;
     }
     .about-content {
         justify-content: center;
     }
     .info-content {
         margin: 0 auto;
+
     }
     .about-container {
         flex-wrap: wrap;
     }
-  
+    .text-div {
+        padding-right: 24vw;
+        padding-left: 2vw;
+    }
 
 
     /* Book your appointment  */
