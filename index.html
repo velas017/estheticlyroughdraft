@@ -30,7 +30,7 @@
         <div class="logo">EstheticLY</div>
         <div>
             <ul class="nav-links">
-                <li><a class="bookingBtn" href="#book">Book Now</a></li>
+                <li><a class="bookingBtn" href="#book" id="navBookNowBtn">Book Now</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Services</a></li>
                 <li><a href="#before">Prep + Aftercare</a></li>
@@ -52,7 +52,7 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a class="bookingBtn" href="#book" onclick="toggleMenu()">Book Now</a></li>
+                <li><a class="bookingBtn" href="#book" onclick="toggleMenu()" id="hamBookNowBtn">Book Now</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Services</a></li>
                 <li><a href="#before" onclick="toggleMenu()">Prep + Aftercare</a></li>
@@ -65,9 +65,9 @@
     <div id="hero-section">
         <div>
             <h1>Start your skincare journey</h1>
-            <p class="hero-text">Your skin health matters whether you’re looking to relax or correct your skin. Let’s start your skincare journey today! </p>
-            <button class="bookingBtn">Book Now</button>
-            <button class="learnMoreBtn">Learn more</button>
+            <p class="hero-text">Your skin health matters. Whether you’re looking to relax or address specific concerns, we offer services like microdermabrasion and dermaplaning facials. Start your skincare journey with us today! </p>
+            <button class="bookingBtn" id="heroBookNowBtn">Book Now</button>
+            <button class="learnMoreBtn" id="heroLearnMoreBtn">Learn more</button>
 
         </div>
         <div>
@@ -76,67 +76,6 @@
     </div>
 
 
-
-    <!-- Carousel Images - may delete later  -->
-<!-- <div class="carousel">
-    <div>
-      <div class="content">
-        <h2>Service Name</h2>
-        <p>more info or button here</p>
-      </div>
-    </div>
-    <div>
-      <div class="content">
-        <h2>Service Name</h2>
-        <p>more info or button here</p>
-      </div>
-    </div>
-    <div>
-      <div class="content">
-        <h2>Service Name</h2>
-        <p>more info or button here</p>
-      </div>
-    </div>
-    <div>
-      <div class="content">
-        <h2>Service Name</h2>
-        <p>more info or button here</p>
-      </div>
-    </div>
-    <div>
-        <div class="content">
-            <h2>Service Name</h2>
-          <p>more info or button here</p>
-<!-- services section with product cards -->
-<!-- <h2>Services</h2>
-
- <div id="servicesSection">
-    
-    <div class="servicesContainer">
-
-        <div class="serviceItem">
-            <div class="serviceItemContent">
-                <div class="serviceItemHeader">Customized Facials</div>
-                <div class="serviceItemText">Customized facials tailor made for you! Lets achieve your skincare goals with top quality treatments: HydraFacial MD, corrective LED therapy, enzyme + chemical peels, oxygen infusion and dermaplaning.</div>
-                <button class="bookingBtn">Book Now</button>
-            </div>
-        </div>
-
-        <div class="serviceItem">
-            <div class="serviceItemContent">
-                <div class="serviceItemHeader">Brows</div>
-                <div class="serviceItemText">Laminate and tint your brows for the ultimate transformation without the commitment of a permanent service. Brow lamination creates the illusion of fuller, fluffier brows for up to 6-8 weeks. Tint lasts up to 3 weeks, results vary.</div>
-                <button class="bookingBtn">Book Now</button>
-            </div>
-        </div>
-      </div>
-      <div>
-        <div class="content">
-            <h2>Service Name</h2>
-          <p>more info or button here</p>
-        </div>
-      </div>
-  </div> -->
 
 
 <!-- link sections - View each carefully -->
@@ -172,7 +111,7 @@
         
     <div class="body-headers" id="projects">
 
-        <h1>Book your Appointment</h1>
+        <h1 id="bookingHeader">Book your Appointment</h1>
         <iframe src="https://app.acuityscheduling.com/schedule.php?owner=30825696&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0"></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
 
     </div>
@@ -289,7 +228,7 @@
     <div class="body-headers" id="questions"> 
         
         <!-- Vers. 3   FAQs -->
-        <h1>FAQ's</h1>
+        <h1 id="faqHeader">FAQ's</h1>
 
         <p class="question-subtext"><strong>EstheticLY</strong> is committed to providing you with the information you need to meet your facial care needs. Below you'll find resources related to our facial care practices and answers to frequently asked questions.</p>
         
@@ -361,15 +300,17 @@
                     <p>
                         Send me an email
                         <br>
-                        <a id="contact-links" href="mailto:amyly.esthetics@gmail.com">amyly.esthetics@gmail.com</a>
+                        <a id="contact-links" href="mailto:amyly.esthetics@gmail.com">amyly.esthetics@gmail.com </a>
                     </p>
                 </div>
                 <div class="sub-card">  
                     <h3>Follow Me</h3>
                     <p>
-                        See my work on Instagram
+                        See my work on my socials
                         <br>
-                        <a id="contact-links" href="https://www.instagram.com/estheticlyskincare/">@estheticlyskincare</a> 
+                        <a id="contact-links" href="https://www.instagram.com/estheticlyskincare/">@estheticlyskincare <i class="fa fa-instagram"></i></a> 
+                        <br>
+                        <a id="contact-links" href="https://www.facebook.com/profile.php?id=61564316234527&mibextid=wwXIfr&rdid=SsLeQ6sJQ3foAyDi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BbM77spHD%2F%3Fmibextid%3DwwXIfr#">@EstheticLY  <i class="fa fa-facebook-f"></i></a>
                     </p>
                 </div>
                 <div class="sub-card">  
@@ -381,7 +322,7 @@
                     </p>
                 </div>
                 <div class="sub-card">  
-                    <h3>Directions</h3>
+                    <h3>Address</h3>
                         <p><strong>Sassy Salon</strong> <br>
                         7211 E Independence Blvd <br>
                         Charlotte, NC 28227 <br>
