@@ -109,30 +109,55 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
         document.documentElement.scrollTop = 0;
     }
 
-// Hero Book now button scroll feature -- Edar 
+// declaring variable for Booking Section
 
-// const heroBookNowBtn = document.querySelector('.bookingBtn');
-// const bookingH1 = Array.from(document.querySelectorAll('h1')).find(h1 =>
-//   h1.textContent.includes("Book your Appointment")
-// );
-
-// if (heroBookNowBtn && bookingH1) {
-//   heroBookNowBtn.addEventListener('click', () => {
-//     bookingH1.scrollIntoView({ behavior: 'smooth', block: 'start' });
-//   });
-// } else {
-//   console.error('Button or target element not found!');
-// }
-
-// Hero learn more button scroll feature -- Edar 
-
-let heroLearnMoreBtn = document.getElementsByClassName('learnMoreBtn')
+const bookingSection = document.getElementById('bookingHeader');
 
 
+// declaring elements for click to scroll Booking Section | Desktop Nav Bar Btn, Hamburger Nav Bar Btn, Book Now Hero Btn, a
+const bookingIDs = ['navBookNowBtn', 'heroBookNowBtn', 'hamBookNowBtn'];
+
+// Loop through each ID and add an event listener
+bookingIDs.forEach(id => {
+  const triggerElement = document.getElementById(id);
+  if (triggerElement) { // Ensure the element exists
+    triggerElement.addEventListener('click', () => {
+      // Scroll to the target section
+      bookingSection.scrollIntoView({
+        behavior: 'smooth', // Smooth scrolling animation
+        block: 'start',     // Align the section to the top of the viewport
+      });
+    });
+  } else {
+    console.error(`Element with ID ${id} not found.`);
+  }
+});
+
+
+// declaring variable for FAQ Section
+
+const faqSection = document.getElementById('faqHeader');
+
+//declaring variable for Hero Learn More Btn
+
+const learnMoreHeroBtn = document.getElementById('heroLearnMoreBtn');
+
+//learn more hero btn click to scroll
+learnMoreHeroBtn.addEventListener('click', () => {
+  // Use scrollIntoView to scroll to the target section
+  faqSection.scrollIntoView({
+    behavior: 'smooth', // Smooth scrolling animation
+    block: 'start',     // Align the section to the top of the viewport
+  });
+});
 
 
 
-    // script for service img carousel
+
+
+
+
+// script for service img carousel
     $('input').on('change', function() {
         $('body').toggleClass('blue');
       });
