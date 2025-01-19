@@ -157,8 +157,5 @@ learnMoreHeroBtn.addEventListener('click', () => {
 
 
 
-// script for service img carousel
-    $('input').on('change', function() {
-        $('body').toggleClass('blue');
-      });
+
 
