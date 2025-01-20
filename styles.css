@@ -206,7 +206,7 @@ h1 {
 /*  Projects/Services  */
 
     #projects {
-        background-color: #F1F0EA;
+        background-color: white;
     }
 
     #projects h1 {
@@ -735,8 +735,22 @@ h1 {
     }
 
 
-  @media screen and (max-width: 3000px) { 
+  @media screen and (max-width: 1024px) { 
 
+    .about-container {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .about-img {
+        border: 5px #F1F0EA;
+        box-shadow: 12px 8px #534b52;
+        margin: 7px;
+        margin-left: 11rem;
+        min-width: 230px;
+        height: 57.35vw;
+        width: 40vw;
+    }
 
 }
 
@@ -760,10 +774,13 @@ h1 {
 
     .about-container {
 
+        padding-right: 6vw;
+        padding-left: 20vw;
+
         .about-img {
             /* border: 5px solid grey; */
             border: 5px #F1F0EA;
-            box-shadow: 8px 5px #534b52;
+            box-shadow: 9px 8px #534b52;
             margin: 7px;
             margin-left: 2.8rem;
             min-width: 230px;
@@ -775,33 +792,39 @@ h1 {
         .about-content {
             font-size: 16px;
             text-align: left;
-            margin-left: 4.7rem;
-            margin-right: 2rem;
+            margin-left: auto;
+            margin-right: auto;
             padding-top: 10px;
             width: 100%;
+
         }
 
-        .info-content {
-            padding:  18px;
+        .info-content p {
+            padding: 12px;
             font-size: 16px;
             font-weight: 250;
+            /* margin-right: 18.6vw; */
         }
     }
 
     .about-section {
         grid-template-columns: 1fr;
-        row-gap: 3fr;
+        row-gap: 3vw;
     }
     .about-content {
         justify-content: center;
     }
     .info-content {
         margin: 0 auto;
+
     }
     .about-container {
         flex-wrap: wrap;
     }
-  
+    .text-div {
+        padding-right: 24vw;
+        padding-left: 2vw;
+    }
 
 
     /* Book your appointment  */
