@@ -206,7 +206,7 @@ h1 {
 /*  Projects/Services  */
 
     #projects {
-        background-color: #F1F0EA;
+        background-color: white;
     }
 
     #projects h1 {
@@ -774,6 +774,9 @@ h1 {
 
     .about-container {
 
+        padding-right: 6vw;
+        padding-left: 20vw;
+
         .about-img {
             /* border: 5px solid grey; */
             border: 5px #F1F0EA;
@@ -789,17 +792,18 @@ h1 {
         .about-content {
             font-size: 16px;
             text-align: left;
-            margin-left: 4.7rem;
-            margin-right: 2rem;
+            margin-left: auto;
+            margin-right: auto;
             padding-top: 10px;
             width: 100%;
+
         }
 
-        .info-content {
-            padding: 18px;
+        .info-content p {
+            padding: 12px;
             font-size: 16px;
             font-weight: 250;
-            margin-right: 23.6vw;
+            /* margin-right: 18.6vw; */
         }
     }
 
