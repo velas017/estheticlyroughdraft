@@ -498,7 +498,7 @@ h1 {
   
  /* backgrounds img */
   .cd-section {
-    background-image: url("./Images/handsOn2.jpg");
+    background-image: url(./Images/handsOn2.jpg);
   }
 
 
@@ -559,7 +559,6 @@ h1 {
 }
 
 .contact-card {
-    /* background-color: var(--white); */
     text-align: center;
     border-radius: 20px;
     flex-direction: column;
@@ -633,59 +632,8 @@ h1 {
 }
 
 
-
-
   #footer {
     background: #534B52;
-  }
-
-
-  /* EDAR U CAN REMOVE FOOTER CSS IF UR WORKING ON IT   <<<<<<<<<<<<<================================ */
-  /* Footer CSS  */
-
-  .footer-content {
-    height: 280px;
-    font-family: "Karla", sans-serif ;
-    color: #E0DDCF;
-    position: relative;
-    bottom: 0;
-    
-  }
-
-  /* .footer-sub {
-    /* z-index: 0;
-    bottom: 0px;
-    left: 2.5%;
-    height: 320px;
-    width: 95%;
-    padding-left: 0.7125rem;
-    padding-right: 0.7125rem;
-    text-align: left; */
-  /* } */ */
-
-  .footer-card {
-    flex-flow: column wrap;
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    align-content: center;
-    justify-content: center;
-    margin-top: 3rem;
-  }
-
-
-  .footer-data2 ul{
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-    list-style: none;
-    margin-top: 4rem;
-    text-align: center;
-
   }
 
 
@@ -735,23 +683,23 @@ h1 {
     }
 
 
-  @media screen and (max-width: 1024px) { 
+  @media screen and (max-width: 1454px) { 
 
-    .about-container {
-        /* flex-wrap: wrap; */
+     .about-container {
+        align-items: center;
         flex-direction: column;
     }
 
-    .about-img {
-        border: 5px #F1F0EA;
-        box-shadow: 12px 8px #534b52;
-        margin: 7px;
-        margin-left: 11rem;
-        min-width: 230px;
-        height: 57.35vw;
-        width: 40vw;
-    }
+    .cd-section {
+        h2 {
+            padding-top: 6rem;
+            padding-right: 1.2rem;
+        }
+  }
 
+    .cd-section--bg-fixed {
+        min-height: 53vh;
+    }
 }
 
 @media screen and (max-width:770px) {
@@ -763,8 +711,8 @@ h1 {
 
     #about h3 {
         font-size: 1.2rem;
-        width: 200px;
-        margin-left: 5.55rem;
+        /* margin-left: 5.55rem;  */
+        text-align: center;
         padding-top: 30px;
     }
 
@@ -774,19 +722,12 @@ h1 {
 
     .about-container {
 
-        padding-right: 6vw;
-        padding-left: 20vw;
-
         .about-img {
-            /* border: 5px solid grey; */
             border: 5px #F1F0EA;
             box-shadow: 9px 8px #534b52;
-            margin: 7px;
-            margin-left: 2.8rem;
             min-width: 230px;
             height: 25rem;
             width: 15rem;
-            
         }
     
         .about-content {
@@ -795,7 +736,6 @@ h1 {
             margin-left: auto;
             margin-right: auto;
             padding-top: 10px;
-            width: 100%;
 
         }
 
@@ -810,10 +750,13 @@ h1 {
     .about-section {
         grid-template-columns: 1fr;
         row-gap: 3vw;
-    }
-    .about-content {
+
+        margin-left: 2vw;
+        margin-right: 2vw;
         justify-content: center;
+        
     }
+
     .info-content {
         margin: 0 auto;
 
@@ -838,7 +781,6 @@ h1 {
      .prep h1 {
         font-size: 2.6rem;
         font-family: "Karla", sans-serif ;
-        /* margin-right: 1.3rem; */
     } 
 
     .before-items {
@@ -852,7 +794,6 @@ h1 {
        
      .container {
         align-content: center;
-        /* margin: 1.5rem .5rem auto; */
         padding: 0;
         margin: 0;
     }
@@ -864,7 +805,6 @@ h1 {
         font-weight: 250;
         text-align: center;
         padding: 1.2rem;
-        /* padding-right: 1.6rem; */
         }
     }
 
@@ -931,11 +871,12 @@ h1 {
  }
 
  /* Hero IMG Mid-Section */
+
     .cd-section {
         margin-left: -8px;
 
         h2 {
-            padding-top: 9.2rem;
+            padding-top: 6rem;
             padding-right: 1.2rem;
             font-size: 3.6rem;
             color: #F1F0EA;
@@ -943,11 +884,9 @@ h1 {
         }
   }
 
-/*     } */
-/*     .cd-section--bg-fixed {
-        min-height: 56vh;
-        background-attachment: fixed;
-    } */
+  .cd-section--bg-fixed {
+    min-height: 48vh;
+  }
 
     /* FAQ Section */
     #questions {
@@ -1022,31 +961,4 @@ h1 {
             }
         }
     }
-}
-
-
-
-
-    /* -- Small Devices */
-
-    @media screen and (max-width: 420px) {
-
-        .abour-section {
-            grid-template-columns: 1fr;
-           
-        }
-        .about-content {
-            width: 100%;
-        }
-    
-        .about-container {
-            flex-wrap: wrap;
-            margin-left: -3.5rem;
-        }
-    
-        .about-img {
-            height: 29rem;
-             width: 19rem;
-        }
-
 }
