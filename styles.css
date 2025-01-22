@@ -483,7 +483,7 @@ h1 {
         color: #F1F0EA;
         text-align: center;
         padding: 3rem;
-        padding-top: 17rem;
+        padding-top: 11rem;
         font-size: 6.2rem;
         font-family: 'Blanvad', sans-serif;
         font-style: italic;
@@ -692,7 +692,7 @@ h1 {
 
     .cd-section {
         h2 {
-            padding-top: 6rem;
+            padding-top: 7rem;
             padding-right: 1.2rem;
         }
   }
@@ -876,7 +876,7 @@ h1 {
         margin-left: -8px;
 
         h2 {
-            padding-top: 6rem;
+            padding-top: 8rem;
             padding-right: 1.2rem;
             font-size: 3.6rem;
             color: #F1F0EA;
@@ -960,5 +960,11 @@ h1 {
                 font-size: 1.12rem;
             }
         }
+    }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .cd-section {
+	    background: url(./Images/handsOn2.jpg) no-repeat center center fixed;
     }
 }
