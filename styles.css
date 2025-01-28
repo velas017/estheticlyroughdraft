@@ -473,10 +473,10 @@ h1 {
 
 
 /* img mid section  */
-  .cd-section {
-    /* background-size: cover;
+  /* .cd-section {
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; */
+    background-position: center center;
     
 
     h2 {
@@ -502,9 +502,41 @@ h1 {
     opacity: .85;
   }
   
- /* backgrounds img */
+ 
   .cd-section {
     background-image: url(./Images/handsOn2.jpg);
+  } */
+
+  /* ---------------------------------------------------------- */
+
+  .lower-img {
+    background-image: url(./Images/handsOn2.jpg);
+    min-height: 400px;
+  }
+  .lower-img {
+    position: relative;
+    opacity: 0.85;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+  }
+  .lower-img-text {
+    background-color: transparent;
+    color: #F1F0EA;
+    font-size: 5.2rem;
+    font-family: 'Blanvad', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-shadow: 3px 3px lightpink;
   }
 
 
@@ -690,7 +722,7 @@ h1 {
 
 
   @media only screen and (max-width 1024px){
-    .cd-section--bg-fixed {
+    .lower-img {
         background-attachment: scroll;
     }
   }
@@ -702,7 +734,7 @@ h1 {
         flex-direction: column;
     }
 
-    .cd-section {
+    /* .cd-section {
         h2 {
             padding-top: 7rem;
             padding-right: 1.2rem;
@@ -711,7 +743,7 @@ h1 {
 
     .cd-section--bg-fixed {
         min-height: 53vh;
-    }
+    } */
 }
 
 @media screen and (max-width:770px) {
@@ -884,7 +916,7 @@ h1 {
 
  /* Hero IMG Mid-Section */
 
-    .cd-section {
+    /* .cd-section {
         margin-left: -8px;
 
         h2 {
@@ -898,6 +930,15 @@ h1 {
 
   .cd-section--bg-fixed {
     min-height: 48vh;
+  } */
+
+
+  .caption {
+    top: 27%;
+  }
+
+  .lower-img-text {
+    font-size: 3.5rem;
   }
 
     /* FAQ Section */
