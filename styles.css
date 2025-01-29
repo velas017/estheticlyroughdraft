@@ -934,12 +934,16 @@ h1 {
   } */
 
 
-  .caption {
+  /* .caption {
     top: 27%;
   }
 
   .lower-img-text {
     font-size: 3.5rem;
+  } */
+
+  .lower-img {
+    display: none;
   }
 
     /* FAQ Section */
