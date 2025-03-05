@@ -381,6 +381,32 @@ h1 {
     background-color: #b72569;
     transition: background-color 0.3s ease-in-out;
   }
+/* Disclaimer Conrainer CSS */
+
+.depositContainer {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.depositContainer > div > p {
+  font-size: 1.25rem;
+  font-size: "Karla" sans-serif;
+}
+
+.depositContainer > div > h3 {
+  font-size: calc(1.6125rem + 4.35vw);
+  text-align: center;
+  font-family: "Karla" sans-serif;
+  color: #534B52;
+}
+
+
+
+
+
+
+
 
 
   /* Treatment Prep CSS */
